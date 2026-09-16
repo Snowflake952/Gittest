@@ -27,6 +27,7 @@ function addTask() {
   }
 
   function toggleTask(id) {
+    
     setTasks(
       tasks.map((item) =>
         item.id === id
@@ -35,7 +36,9 @@ function addTask() {
       )
     )
   }
-
+function deleteTask(id) {
+  setTasks(tasks.filter((item) => item.id !== id))
+}
   return (
     <div className="app">
       <header>
